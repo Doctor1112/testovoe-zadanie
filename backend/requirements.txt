@@ -1,0 +1,26 @@
+aiogram[i18n]~=3.0.0b7
+tortoise-orm[asyncpg]
+aerich
+nest-asyncio
+fastapi
+uvicorn
+pydantic[dotenv]==1.*
+apscheduler
+sentry-sdk
+loguru
+watchfiles
+wait-for-it
+python-multipart
+secure
+# passlib[bcrypt]
+python-jose
+# fuzzywuzzy[speedup]
+pytz
+phonenumbers
+python-dateutil
+validators
+beautifulsoup4
+lxml
+semver
+asyncssh
+cloudpayments

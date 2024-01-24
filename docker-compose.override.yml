@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  backend:
+    build: backend
+    command:
+      - --host=0.0.0.0
+      - --port=${BACKEND_PORT}
+      - --log-level=warning
+      - --reload
+      - --reload-include=*.po
+      - --reload-dir=/app/src
+      - --reload-dir=/app/resources
+    environment:
+      - DEBUG=True
+      - WATCHFILES_FORCE_POLLING=True
+    volumes:
+      - ./backend/src:/app/src
+      - ./backend/resources:/app/resources
