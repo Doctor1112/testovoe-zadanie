@@ -119,6 +119,9 @@ class User(BaseModel, CreatedAtMixin, UpdatedAtMixin):
     phone_number = fields.CharField(max_length=32, unique=True, null=True)
     is_banned = fields.BooleanField(default=False)
 
+    age = fields.IntField(null=True)
+    first_name = fields.TextField(null=True)
+
     card_token = fields.TextField(null=True)
     card_first_six = fields.IntField(null=True)
     card_last_four = fields.IntField(null=True)

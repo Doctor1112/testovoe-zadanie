@@ -1,5 +1,5 @@
 import contextlib
-from typing import assert_never
+from typing_extensions import assert_never
 
 from aiogram import types, Bot
 from aiogram.exceptions import TelegramAPIError

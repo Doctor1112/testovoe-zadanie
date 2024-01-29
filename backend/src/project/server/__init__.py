@@ -1,3 +1,4 @@
+from fastapi.responses import HTMLResponse
 from project.logs import configure_logging
 
 configure_logging()
@@ -31,6 +32,15 @@ app = FastAPI(
     ],
     debug=settings.DEBUG,
 )
+
+@app.get("/", response_class=HTMLResponse)
+def main(age: int, name: str, user_cnt: int):
+    return HTMLResponse(
+        content=f"""<p>Кол-во зарегистрированных пользователей: {user_cnt}</p>
+                    <p>Ваш возраст: {age}</p>
+                    <p>Ваше имя: {name}</p>
+                    """
+    )
 
 from . import middlewares
 from . import routes

@@ -1,5 +1,4 @@
-FROM python:alpine
-RUN apk add --no-cache postgresql-client
+FROM python:3.10.11-slim-bullseye
 
 ENV PROJECT_DIR=/app
 WORKDIR $PROJECT_DIR

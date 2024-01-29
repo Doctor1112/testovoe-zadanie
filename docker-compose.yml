@@ -3,9 +3,10 @@ version: "3"
 services:
   backend:
     env_file: .env
-    image: ${REGISTRY}/backend:${TAG:-latest}
     build: backend
     tty: true
+    ports:
+      - ${BACKEND_PORT}:8000
     command:
       - --host=0.0.0.0
       - --port=${BACKEND_PORT}

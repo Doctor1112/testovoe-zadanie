@@ -1,6 +1,6 @@
 from apscheduler.triggers.cron import CronTrigger
 
-from db.dumps import create_pg_dump
+from project.db.dumps import create_pg_dump
 from project.scheduler import scheduler
 
 
